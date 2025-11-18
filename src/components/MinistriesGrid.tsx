@@ -1,5 +1,5 @@
 import React from "react";
-import MinistryCard, { MinistryCardProps } from "./MinistryCard";
+import MinistryCard, { type MinistryCardProps } from "./MinistryCard";
 
 const ministries: MinistryCardProps[] = [
   {
