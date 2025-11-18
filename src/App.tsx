@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Ministries from "./pages/Ministries";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
-import Committees from "./pages/Committees";
+//import Committees from "./pages/Committees";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="/ministries" element={<Ministries />} />
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/committees" element={<Committees />} />
+        {/* <Route path="/committees" element={<Committees />} /> */}
       </Routes>
 
       <Footer />
