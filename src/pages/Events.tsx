@@ -1,136 +1,91 @@
-import React, { useState, type ChangeEvent, type FormEvent } from "react";
+import React from "react";
 
-interface ContactForm {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
+// Define the type for a single event
+interface EventItem {
+  id: number;
+  title: string;
+  date: string;
+  location: string;
+  description: string;
+  image: string;
 }
 
-const Contact: React.FC = () => {
-  const [formData, setFormData] = useState<ContactForm>({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+// Props type if you want to pass events from a parent
+interface EventProps {
+  events?: EventItem[];
+}
 
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+const Event: React.FC<EventProps> = ({ events }) => {
+  // Sample events if none are passed as props
+  const sampleEvents: EventItem[] = [
+    {
+      id: 1,
+      title: "Campus Revival Meeting",
+      date: "2025-12-05",
+      location: "Main Auditorium",
+      description:
+        "Join us for a powerful evening of worship and teaching with special guest speakers.",
+      image: "assets/images/event1.jpg",
+    },
+    {
+      id: 2,
+      title: "Missions Outreach",
+      date: "2025-12-12",
+      location: "Local Community Center",
+      description:
+        "Participate in our annual missions outreach and serve the local community with love.",
+      image: "assets/images/event2.jpg",
+    },
+    {
+      id: 3,
+      title: "Creative Arts Showcase",
+      date: "2025-12-20",
+      location: "University Hall",
+      description:
+        "Experience drama, dance, and music performed by our talented ministries.",
+      image: "assets/images/event3.jpg",
+    },
+  ];
 
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      setError("Please fill in all required fields.");
-      return;
-    }
-
-    setError(null);
-
-    // Replace this with your API call
-    console.log("Form submitted:", formData);
-
-    // Reset form or show confirmation
-    setSubmitted(true);
-    setFormData({ name: "", email: "", subject: "", message: "" });
-  };
+  const displayedEvents = events || sampleEvents;
 
   return (
-    <section className="contact-section py-5">
+    <section className="events-section py-5">
       <div className="container">
-        <h2 className="section-title text-center mb-4">Contact Us</h2>
+        <h2 className="section-title text-center mb-4">Upcoming Events</h2>
         <p className="text-center mb-5 text-muted">
-          We'd love to hear from you! Fill out the form below and we’ll get back to you.
+          Stay informed and join our community in worship, service, and celebration.
         </p>
 
-        {submitted && (
-          <div className="alert alert-success text-center">
-            Thank you! Your message has been sent.
-          </div>
-        )}
-
-        {error && (
-          <div className="alert alert-danger text-center">{error}</div>
-        )}
-
-        <form onSubmit={handleSubmit} className="mx-auto" style={{ maxWidth: 600 }}>
-          <div className="mb-3">
-            <label htmlFor="name" className="form-label">
-              Name*
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label">
-              Email*
-            </label>
-            <input
-              type="email"
-              className="form-control"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="mb-3">
-            <label htmlFor="subject" className="form-label">
-              Subject
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-            />
-          </div>
-
-          <div className="mb-3">
-            <label htmlFor="message" className="form-label">
-              Message*
-            </label>
-            <textarea
-              className="form-control"
-              id="message"
-              name="message"
-              rows={5}
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
-
-          <div className="text-center">
-            <button type="submit" className="btn btn-primary btn-lg">
-              Send Message
-            </button>
-          </div>
-        </form>
+        <div className="row">
+          {displayedEvents.map((event) => (
+            <div className="col-md-6 col-lg-4 mb-4" key={event.id}>
+              <div className="card h-100 shadow-sm">
+                <img
+                  src={event.image}
+                  className="card-img-top"
+                  alt={event.title}
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{event.title}</h5>
+                  <p className="card-text">{event.description}</p>
+                  <p className="card-text">
+                    <strong>Date:</strong> {event.date} <br />
+                    <strong>Location:</strong> {event.location}
+                  </p>
+                </div>
+                <div className="card-footer text-center">
+                  <button className="btn btn-primary btn-sm">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
-export default Contact;
+export default Event;
