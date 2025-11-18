@@ -11,7 +11,10 @@ export default function About() {
   return (
     <>
       <Navbar />
-      <PageHero />
+      <PageHero 
+      title="Our Ministries"
+        subtitle="Where Faith Becomes Action: Serve, Grow, Impact"
+        image="/assets/images/mbbc1.jpg"/>
       <Introduction />
       <GuidingPrinciples />
       <Aims />
