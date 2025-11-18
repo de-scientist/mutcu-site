@@ -13,7 +13,7 @@ export default function Introduction() {
 
             <p>
               As a proud member of 
-              <a href="https://focuskenya.org/" target="_blank" className="mutcu-link-orange ms-1">
+              <a href="https://focuskenya.org/" target="_blank" rel="noopener noreferrer" className="mutcu-link-orange ms-1">
                 FOCUS-KENYA
               </a>,
               MUTCU benefits from a national network...
