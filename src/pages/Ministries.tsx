@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
-import HeroSection from "../components/HeroSection";
+import PageHero from "../components/PageHero";
 import MinistriesGrid from "../components/MinistriesGrid";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
@@ -16,7 +16,7 @@ const MinistriesPage: React.FC = () => {
     <>
       <Navbar />
 
-      <HeroSection
+      <PageHero
         title="Our Ministries"
         subtitle="Where Faith Becomes Action: Serve, Grow, Impact"
         image="/assets/images/mbbc1.jpg"
