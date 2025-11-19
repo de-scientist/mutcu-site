@@ -12,7 +12,7 @@ import Events from "./pages/Events";
 import Bible from "./pages/Bible";
 import Chairman from "./pages/Chairman";
 import Contact from "./pages/Contact";
-//import Committees from "./pages/Committees";
+
 
 const App: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ const App: React.FC = () => {
           <Route path="bible" element={<Bible />} />
           <Route path="chairman" element={<Chairman />} />
           <Route path="contact" element={<Contact />} />
-          {/* <Route path="committees" element={<Committees />} /> */}
+          
         </Route>
       </Routes>
     </BrowserRouter>
