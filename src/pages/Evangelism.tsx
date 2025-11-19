@@ -15,7 +15,7 @@ const roles = [
   { text: "Partnering with relevant organizations for financial and material support for mission work.", delay: 600 },
 ];
 
-const App: React.FC = () => (
+const Evangelism: React.FC = () => (
   <>
     <Navbar />
     <PageHero
@@ -40,4 +40,4 @@ const App: React.FC = () => (
   </>
 );
 
-export default App;
+export default Evangelism;
