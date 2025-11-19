@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import PageHero from "./PageHero";
+import PageHero from "../components/PageHero";
 import LeaderProfile from "../components/LeaderProfileE";
 import RolesSection from "../components/RolesE";
 import CTASection from "../components/CTAE";
