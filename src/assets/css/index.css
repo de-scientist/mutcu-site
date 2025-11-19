@@ -241,6 +241,7 @@ p {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     padding: 30px;
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
     height: 100%; /* Ensure cards have equal height */
@@ -383,14 +384,15 @@ p {
 .prayer-section p.lead {
     color: rgba(255, 255, 255, 0.9);
 }
-
 .prayer-section form {
     background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 40px;
     border-radius: 15px;
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
+
 
 .prayer-section .form-label {
     color: #04003d;
@@ -437,16 +439,17 @@ p {
 
 .testimonials-section .section-title::after {
     background-color: var(--mutcu-orange);
-}
-
 .testimonial-card {
     max-width: 800px;
     background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     color: #30d5c8;
     font-size: 1.1rem;
+    line-height: 1.8;
+}
     line-height: 1.8;
 }
 
@@ -529,15 +532,16 @@ p {
 }
 
 .newsletter-section p.lead {
-    color: #04003d;
-}
-
 .newsletter-section form {
     background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 40px;
     border-radius: 15px;
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
+}
+    border-radius: 15px;
+    
 }
 
 .newsletter-section .form-label {
