@@ -1,36 +1,61 @@
 import React from "react";
 
-export default function Navbar() {
+// Optional: Define props type if you want to customize active links or logo later
+interface NavbarProps {
+  logoSrc?: string;
+  logoAlt?: string;
+  links?: { name: string; href: string; active?: boolean }[];
+}
+
+const Navbar: React.FC<NavbarProps> = ({
+  logoSrc = "assets/images/best logo.png",
+  logoAlt = "MUTCU Logo",
+  links = [
+    { name: "Home", href: "index.html" },
+    { name: "About", href: "about.html", active: true },
+    { name: "Ministries", href: "ministries.html" },
+    { name: "Events", href: "events.html" },
+    { name: "Resources", href: "resources.html" },
+    { name: "Gallery", href: "gallery.html" },
+    { name: "Contact", href: "contact.html" },
+  ],
+}) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
       <div className="container">
         <a className="navbar-brand" href="index.html">
-          <img src="assets/images/best logo.png" alt="MUTCU Logo" height="60" />
+          <img src={logoSrc} alt={logoAlt} height={60} />
         </a>
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          title="Toggle navigation"
+          aria-controls="navbarNav"
+          aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
-          <span className="visually-hidden">Toggle navigation</span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item"><a className="nav-link" href="index.html">Home</a></li>
-            <li className="nav-item"><a className="nav-link active" href="about.html">About</a></li>
-            <li className="nav-item"><a className="nav-link" href="ministries.html">Ministries</a></li>
-            <li className="nav-item"><a className="nav-link" href="events.html">Events</a></li>
-            <li className="nav-item"><a className="nav-link" href="resources.html">Resources</a></li>
-            <li className="nav-item"><a className="nav-link" href="gallery.html">Gallery</a></li>
-            <li className="nav-item"><a className="nav-link" href="contact.html">Contact</a></li>
+            {links.map((link, idx) => (
+              <li className="nav-item" key={idx}>
+                <a
+                  className={`nav-link${link.active ? " active" : ""}`}
+                  href={link.href}
+                  aria-current={link.active ? "page" : undefined}
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;
