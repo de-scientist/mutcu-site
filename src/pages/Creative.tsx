@@ -15,13 +15,13 @@ const roles = [
   { icon: "fas fa-users", text: "Collaborating with the Music Ministry for events like the Christmas Cantata." },
 ];
 
-const App: React.FC = () => (
+const Creative: React.FC = () => (
   <>
     <Navbar />
     <PageHero
       title="MUTCU Creative Ministry"
       subtitle="Inspiring Faith Through Artistic Expression"
-      backgroundImage="/assets/images/creative-hero.jpg"
+      image="/assets/images/creative-hero.jpg"
     />
     <LeaderProfile
       name="Brian Ingwee"
@@ -38,4 +38,4 @@ const App: React.FC = () => (
   </>
 );
 
-export default App;
+export default Creative;

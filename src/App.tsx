@@ -5,6 +5,7 @@ import Chairman from "./pages/Chairman";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Ministries from "./pages/Ministries";
+import Creative from "./pages/Creative";
 import Events from "./pages/Events";
 import Bible from "./pages/Bible";
 import Contact from "./pages/Contact";
@@ -21,6 +22,7 @@ function App() {
         <Route path="/ministries" element={<Ministries />} />
         <Route path="/events" element={<Events />} />
         <Route path="/bible" element={<Bible />}></Route>
+        <Route path="/creative" element={<Creative />} />
         <Route path="/chairman" element={<Chairman />} />
         <Route path="/contact" element={<Contact />} />
         {/* <Route path="/committees" element={<Committees />} /> */}
