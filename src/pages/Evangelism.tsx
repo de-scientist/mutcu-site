@@ -21,7 +21,7 @@ const App: React.FC = () => (
     <PageHero
       title="Missions & Evangelism Ministry"
       subtitle="Sharing the Gospel and Impacting Communities"
-      backgroundImage="/assets/images/YUSUF.jpg"
+      image="/assets/images/YUSUF.jpg"
     />
     <LeaderProfile
       name="Yusuf Muchiri"
