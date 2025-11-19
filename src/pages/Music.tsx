@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import LeaderProfile from "./LeaderProfile";
 import RolesSection from "./RolesSection";
-import CTASection from "./CTASection";
+import CTASection from "../components/CTAM";
 import Footer from "../components/Footer";
 
 const roles = [
