@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import PageHero from "../components/PageHero";
 import LeaderProfile from "../components/LeaderProfileM";
 import RolesSection from "../components/RolesM";
