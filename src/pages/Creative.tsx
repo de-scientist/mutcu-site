@@ -2,7 +2,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import PageHero from "./PageHero";
-import LeaderProfile from "./LeaderProfile";
+import LeaderProfile from "../components/LeaderProfileCr";
 import RolesSection from "../components/RolesCr";
 import Footer from "../components/Footer";
 
