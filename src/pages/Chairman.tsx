@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import PageHero from "../components/PageHero";
 import LeaderProfile from "../components/LeaderProfile";
 import Roles from "../components/Roles";
-import CTA from "../components/CTA";
+import CTA from "../components/CTAL";
 import Footer from "../components/Footer";
 
 const Chairman: React.FC = () => {
