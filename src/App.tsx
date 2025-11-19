@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import Chairman from "./pages/Chairman";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Ministries from "./pages/Ministries";
@@ -21,6 +21,7 @@ function App() {
         <Route path="/ministries" element={<Ministries />} />
         <Route path="/events" element={<Events />} />
         <Route path="/bible" element={<Bible />}></Route>
+        <Route path="/chairman" element={<Chairman />} />
         <Route path="/contact" element={<Contact />} />
         {/* <Route path="/committees" element={<Committees />} /> */}
       </Routes>
