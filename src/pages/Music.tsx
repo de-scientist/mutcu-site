@@ -17,10 +17,10 @@ const roles = [
 const Music: React.FC = () => (
   <>
     <Navbar />
-    <Hero
+    <PageHero
       title="MUTCU Music Ministry"
       subtitle="Leading Worship and Glorifying God Through Song"
-      backgroundImage="/assets/images/music-hero.jpg"
+      image="/assets/images/music-hero.jpg"
     />
     <section className="ministry-details py-5">
       <div className="container">
