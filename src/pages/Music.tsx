@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import LeaderProfile from "./LeaderProfile";
-import RolesSection from "./RolesSection";
+import RolesSection from "../components/RolesM";
 import CTASection from "../components/CTAM";
 import Footer from "../components/Footer";
 
